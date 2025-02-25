@@ -55,6 +55,9 @@ print(f'DIVISÃO: {out_divisao}')
 # 1) CONVERSOR DE TEMPERATURAS
 # Criar um programa que converta uma temperatura de graus Celsius para Fahrenheit.
 # Fórmula: F = C * 9/5 + 32
+in_temperatura_celsius = float(input('Informe uma temperaura em Celsius: '))
+out_conversao_fahrenheit = in_temperatura_celsius * 1.8 + 32
+print(f'{in_temperatura_celsius}°C equivalem a {out_conversao_fahrenheit}°F.')
 
 # 2) ÁREA DE UM CÍRCULO
 # Criar um programa que calcule a área de um círculo com base no raio fornecido pelo usuário.
