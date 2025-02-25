@@ -49,7 +49,6 @@ print(f'MULTIPLICAÇÃO: {out_multiplicacao}')
 print(f'DIVISÃO: {out_divisao}')
 
 
-
 # DESAFIOS
 
 # 1) CONVERSOR DE TEMPERATURAS
@@ -59,7 +58,12 @@ in_temperatura_celsius = float(input('Informe uma temperaura em Celsius: '))
 out_conversao_fahrenheit = in_temperatura_celsius * 1.8 + 32
 print(f'{in_temperatura_celsius}°C equivalem a {out_conversao_fahrenheit}°F.')
 
+
 # 2) ÁREA DE UM CÍRCULO
 # Criar um programa que calcule a área de um círculo com base no raio fornecido pelo usuário.
 # Fórmula: Área = π * raio²
 # π = 3.14159
+in_circulo_raio = float(input('Informe uma medida de raio para o círculo: '))
+in_pi = 3.14159
+out_circulo_area = in_pi * (in_circulo_raio * in_circulo_raio)
+print(f'Á área de um círculo de raio de {in_circulo_raio} é de {out_circulo_area}.')
