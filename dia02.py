@@ -35,6 +35,19 @@ print(mensagem)
 # Exibir os resultados.
 # OBS: A função input() permite que o usuário insira dados.
 # Usamos float() para converter a entrada em um número de ponto flutuante.
+in_num1 = float(input('Informe um número: '))
+in_num2 = float(input('Informe outro número: '))
+
+out_soma = in_num1 + in_num2
+out_subtracao = in_num1 - in_num2
+out_multiplicacao = in_num1 * in_num2
+out_divisao = in_num1 / in_num2
+
+print(f'SOMA: {out_soma}')
+print(f'SUBTRAÇÃO: {out_subtracao}')
+print(f'MULTIPLICAÇÃO: {out_multiplicacao}')
+print(f'DIVISÃO: {out_divisao}')
+
 
 
 # DESAFIOS
