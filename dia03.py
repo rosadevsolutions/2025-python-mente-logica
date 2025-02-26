@@ -29,7 +29,18 @@ else:
 # ● Nota Média: 8.5
 # ● Frequência: 80%
 # Verificar se o estudante foi aprovado.
+cond_media_nota_default = 7.0
+cond_media_frequencia_default = 0.75
+in_media_nota_estudante = 8.5
+in_media_frequencia_estudante = 0.80
+cond_media_nota_aprovacao = in_media_nota_estudante >= cond_media_nota_default
+cond_media_frequencia_aprovacao = in_media_frequencia_estudante >= cond_media_frequencia_default
+cond_aprovacao = cond_media_nota_aprovacao and cond_media_frequencia_aprovacao
 
+if cond_aprovacao:
+  print('Estudante Aprovado')
+else:
+  print('Estudante Reprovado')
 
 # 3) OFERTA ESPECIAL
 # Uma loja oferece um desconto se o cliente comprar mais de 10 itens
