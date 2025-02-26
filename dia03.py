@@ -50,6 +50,18 @@ else:
 # ● Valor total: R$120
 # Verificar se o cliente tem direito ao desconto.
 
+cond_quantidade_itens = 10
+cond_valor_total = 120
+
+in_quantidade_itens = 8
+in_valor_total = 120
+
+cond_desconto = in_quantidade_itens >= cond_quantidade_itens or in_valor_total >= cond_valor_total
+
+if cond_desconto:
+  print("Desconto Está Disponível para o Cliente")
+else:
+  print("Desconto Não Está Disponível para Cliente")
 
 # 4) SISTEMA DE ACESSO
 # Para acessar uma área restrita, o usuário deve inserir
