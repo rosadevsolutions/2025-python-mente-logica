@@ -8,6 +8,19 @@
 # Você pagou com uma nota de R$ 20.
 # Calcule quanto de troco você deve receber.
 
+preco_pao = 3.50
+preco_leite = 4.20
+preco_cafe = 2.80
+valor_compra = preco_pao + preco_leite + preco_cafe
+cliente_pagamento = 20.00
+is_compra_sem_troco = valor_compra == cliente_pagamento
+is_compra_com_troco = cliente_pagamento - valor_compra
+
+if is_compra_sem_troco:
+  print('Sem troco. Valor da Compra é de R$ 20,00')
+else:
+  print(f'TROCO: R$ {is_compra_com_troco:.2f}')
+
 
 # 2) VERIFICAR APROVAÇÃO EM EXAME
 # Para ser aprovado em um exame, um estudante precisa ter uma nota média
