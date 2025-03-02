@@ -10,18 +10,22 @@
 print(f'=====================================')
 print(f'1) CALCULAR TROCO - MINHA RESPOSTA')
 
-preco_pao = 3.50
-preco_leite = 4.20
-preco_cafe = 2.80
-valor_compra = preco_pao + preco_leite + preco_cafe
-cliente_pagamento = 20.00
-is_compra_sem_troco = valor_compra == cliente_pagamento
-is_compra_com_troco = cliente_pagamento - valor_compra
+cond_preco_pao = 3.50
+cond_preco_leite = 4.20
+cond_preco_cafe = 2.80
 
-if is_compra_sem_troco:
-  print('Sem troco. Valor da Compra é de R$ 20,00')
-else:
-  print(f'TROCO: R$ {is_compra_com_troco:.2f}')
+in_valor_compra = cond_preco_pao + cond_preco_leite + cond_preco_cafe
+in_cliente_pagamento = 20.00
+
+ver_compra_sem_troco = in_valor_compra == in_cliente_pagamento
+calc_compra_com_troco = in_cliente_pagamento - in_valor_compra
+
+out_mensagem = f'Sem troco. Valor da Compra é de R${in_cliente_pagamento:.2f}'
+
+if ver_compra_sem_troco != True:
+  out_mensagem = f'TROCO: R${calc_compra_com_troco:.2f}'
+
+print(out_mensagem)
 
 
 # 2) VERIFICAR APROVAÇÃO EM EXAME
