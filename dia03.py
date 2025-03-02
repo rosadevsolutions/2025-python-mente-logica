@@ -7,6 +7,8 @@
 # ● Café: R$2.80
 # Você pagou com uma nota de R$ 20.
 # Calcule quanto de troco você deve receber.
+print(f'=====================================')
+print(f'1) CALCULAR TROCO - MINHA RESPOSTA')
 
 preco_pao = 3.50
 preco_leite = 4.20
@@ -29,6 +31,9 @@ else:
 # ● Nota Média: 8.5
 # ● Frequência: 80%
 # Verificar se o estudante foi aprovado.
+print(f'=====================================')
+print(f'2) VERIFICAR APROVAÇÃO EM EXAME - MINHA RESPOSTA')
+
 cond_media_nota_default = 7.0
 cond_media_frequencia_default = 0.75
 in_media_nota_estudante = 8.5
@@ -49,6 +54,8 @@ else:
 # ● Quantidade de itens: 8
 # ● Valor total: R$120
 # Verificar se o cliente tem direito ao desconto.
+print(f'=====================================')
+print(f'3) OFERTA ESPECIAL - MINHA RESPOSTA')
 
 cond_quantidade_itens = 10
 cond_valor_total = 120
@@ -71,6 +78,21 @@ else:
 # ● Senha correta: "abcd1234"
 # ● Usuário bloqueado: False
 # Verifique se o acesso deve ser concedido.
+print(f'=====================================')
+print(f'4) SISTEMA DE ACESSO - MINHA RESPOSTA')
+
+in_senha_usuario = "abcd12345"
+def_senha_sistema = "abcd1235"
+check_senha = in_senha_usuario == def_senha_sistema
+check_acesso = False
+out_acesso = check_senha == True and check_acesso == False
+out_mensagem = "Acesso Bloqueado"
+
+if(out_acesso):
+  out_mensagem = "Acesso Liberado"
+
+print(f'{out_mensagem}')
+
 
 
 # 5) DIVISÃO DE CONTA
