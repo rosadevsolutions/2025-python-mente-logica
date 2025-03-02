@@ -160,11 +160,11 @@ in_peso = int(input('Informe seu peso: \n'))
 in_altura = float(input('\nInforme sua altura: \n'))
 calc_imc = in_peso / in_altura**2
 
-cond_imc_ideal = calc_imc >= 18.5 and calc_imc <= 24.9
+ver_imc_ideal = calc_imc >= 18.5 and calc_imc <= 24.9
 
 out_status = '\nPARABÉNS!!! IMC DENTRO DA FAIXA DE PESO IDEAL.'
 
-if(cond_imc_ideal != True):
+if(ver_imc_ideal != True):
   out_status = '\nALERTA!!! IMC FORA DA FAIXA DE PESO IDEAL.'
 
 out_valor = f'\nSEU IMC: {calc_imc:.1f} \nIMC - PESO IDEAL: Entre 18.5 e 24.9\n'
