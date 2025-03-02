@@ -132,7 +132,23 @@ print(out_mensagem)
 # Verificar se uma pessoa pode assistir a um filme classificado como "maiores de 16 anos".
 # Dados:
 # ● Idade da pessoa: Pergunte ao usuário
+print(f'=====================================')
+print(f'DESAFIO 1) CLASSIFICAÇÃO ETÁRIA - MINHA RESPOSTA')
 
+cond_faixa_etaria = 16
+
+in_faixa_etaria_user = int(input('Informe sua idade: \n'))
+
+ver_faixa_etaria = in_faixa_etaria_user >= cond_faixa_etaria
+
+out_status = '\nPERMITIDO.'
+
+if( ver_faixa_etaria != True ):
+  out_status = '\nNÃO PERMITIDO.'
+
+out_faixa_etaria = f'\nFaixa Etária do Filme: {cond_faixa_etaria} anos. \nIdade do Cliente: {in_faixa_etaria_user} anos.\n'
+out_mensagem = out_status + out_faixa_etaria
+print(out_mensagem)
 
 # 2) CALCULADORA IMC
 # O Índice de Massa Corporal (IMC) é calculado dividindo o peso (em kg) pela altura (em metros) elevada ao quadrado.
