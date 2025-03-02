@@ -34,18 +34,22 @@ else:
 print(f'=====================================')
 print(f'2) VERIFICAR APROVAÇÃO EM EXAME - MINHA RESPOSTA')
 
-cond_media_nota_default = 7.0
-cond_media_frequencia_default = 0.75
+cond_media_nota = 7.0
+cond_media_frequencia = 0.75
+
 in_media_nota_estudante = 8.5
 in_media_frequencia_estudante = 0.80
-cond_media_nota_aprovacao = in_media_nota_estudante >= cond_media_nota_default
-cond_media_frequencia_aprovacao = in_media_frequencia_estudante >= cond_media_frequencia_default
-cond_aprovacao = cond_media_nota_aprovacao and cond_media_frequencia_aprovacao
 
-if cond_aprovacao:
-  print('Estudante Aprovado')
-else:
-  print('Estudante Reprovado')
+ver_media = in_media_nota_estudante >= cond_media_nota
+ver_frequencia = in_media_frequencia_estudante >= cond_media_frequencia
+ver_aprovacao  = ver_media and ver_frequencia
+
+out_mensagem = 'Estudante Reprovado'
+
+if ver_aprovacao:
+  out_mensagem = 'Estudante Aprovado'
+
+print(out_mensagem)
 
 # 3) OFERTA ESPECIAL
 # Uma loja oferece um desconto se o cliente comprar mais de 10 itens
@@ -58,18 +62,21 @@ print(f'=====================================')
 print(f'3) OFERTA ESPECIAL - MINHA RESPOSTA')
 
 cond_quantidade_itens = 10
-cond_valor_total = 120
+cond_valor_total = 100
 
 in_quantidade_itens = 8
 in_valor_total = 120
 
-cond_desconto = in_quantidade_itens >= cond_quantidade_itens or in_valor_total >= cond_valor_total
+ver_itens = in_quantidade_itens >= cond_quantidade_itens
+ver_valor = in_valor_total >= cond_valor_total
+ver_desconto = ver_itens or ver_valor
 
+out_mensagem = 'Desconto Indisponível para o Cliente'
 
-if cond_desconto:
-  print("Desconto Está Disponível para o Cliente")
-else:
-  print("Desconto Não Está Disponível para Cliente")
+if ver_desconto:
+  out_mensagem = 'Desconto Disponível para o Cliente'
+
+print(out_mensagem)
 
 # 4) SISTEMA DE ACESSO
 # Para acessar uma área restrita, o usuário deve inserir
