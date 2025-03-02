@@ -174,3 +174,17 @@ print(out_mensagem)
 
 # 3) PAR OU ÍMPAR
 # Solicitar um número inteiro ao usuário e verifica se ele é par ou ímpar.
+print('=====================================')
+print('3) PAR OU ÍMPAR')
+
+in_numero = int(input('\nInforme um número: \n'))
+
+calc_numero_sobra = in_numero % 2
+ver_numero_par = calc_numero_sobra == 0
+
+out_mensagem = '\nNÚMERO PAR\n'
+
+if(ver_numero_par != True):
+  out_mensagem = '\nNÚMERO ÍMPAR\n'
+
+print(out_mensagem)
