@@ -153,7 +153,24 @@ print(out_mensagem)
 # 2) CALCULADORA IMC
 # O Índice de Massa Corporal (IMC) é calculado dividindo o peso (em kg) pela altura (em metros) elevada ao quadrado.
 # Calcular o IMC e verificar se a pessoa está dentro do peso ideal (IMC entre 18.5 e 24.9).
+print(f'=====================================')
+print(f'DESAFIO 2) CALCULADORA IMC')
 
+in_peso = int(input('Informe seu peso: \n'))
+in_altura = float(input('\nInforme sua altura: \n'))
+calc_imc = in_peso / in_altura**2
+
+cond_imc_ideal = calc_imc >= 18.5 and calc_imc <= 24.9
+
+out_status = '\nPARABÉNS!!! IMC DENTRO DA FAIXA DE PESO IDEAL.'
+
+if(cond_imc_ideal != True):
+  out_status = '\nALERTA!!! IMC FORA DA FAIXA DE PESO IDEAL.'
+
+out_valor = f'\nSEU IMC: {calc_imc:.1f} \nIMC - PESO IDEAL: Entre 18.5 e 24.9\n'
+
+out_mensagem = out_status + out_valor
+print(out_mensagem)
 
 # 3) PAR OU ÍMPAR
 # Solicitar um número inteiro ao usuário e verifica se ele é par ou ímpar.
