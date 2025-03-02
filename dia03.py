@@ -65,6 +65,7 @@ in_valor_total = 120
 
 cond_desconto = in_quantidade_itens >= cond_quantidade_itens or in_valor_total >= cond_valor_total
 
+
 if cond_desconto:
   print("Desconto Está Disponível para o Cliente")
 else:
@@ -99,6 +100,19 @@ print(f'{out_mensagem}')
 # Três amigos vão dividir igualmente uma conta de R$ 150.
 # Verificar quanto cada um deve pagar e
 # se a divisão é exata (sem centavos restantes).
+print(f'=====================================')
+print(f'5) DIVISÃO DE CONTA - MINHA RESPOSTA')
+
+in_clientes = 2
+in_valor_total = 120
+calc_valor_individual = in_valor_total / in_clientes
+out_divisao_exata = in_valor_total % in_clientes
+out_mensagem = f'Divisão não é exata! Cada pessoa vai pagar aproximadamente R${calc_valor_individual:.2f}'
+
+if (out_divisao_exata == 0):
+  out_mensagem =  f'Divisão exata. Cada pessoa vai pagar R${calc_valor_individual:.2f}'
+
+print(out_mensagem)
 
 
 # DESAFIOS EXTRAS
