@@ -139,11 +139,11 @@ cond_faixa_etaria = 16
 
 in_faixa_etaria_user = int(input('Informe sua idade: \n'))
 
-ver_faixa_etaria = in_faixa_etaria_user >= cond_faixa_etaria
+proc_faixa_etaria = in_faixa_etaria_user >= cond_faixa_etaria
 
 out_status = '\nPERMITIDO.'
 
-if(not ver_faixa_etaria):
+if(not proc_faixa_etaria):
   out_status = '\nNÃO PERMITIDO.'
 
 out_faixa_etaria = f'\nFaixa Etária do Filme: {cond_faixa_etaria} anos. \nIdade do Cliente: {in_faixa_etaria_user} anos.\n'
