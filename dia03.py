@@ -71,13 +71,13 @@ cond_valor_total = 100
 in_quantidade_itens = 8
 in_valor_total = 120
 
-ver_itens = in_quantidade_itens >= cond_quantidade_itens
-ver_valor = in_valor_total >= cond_valor_total
-ver_desconto = ver_itens or ver_valor
+proc_itens = in_quantidade_itens >= cond_quantidade_itens
+proc_valor = in_valor_total >= cond_valor_total
+proc_desconto = proc_itens or proc_valor
 
 out_mensagem = 'Desconto Indisponível para o Cliente'
 
-if ver_desconto:
+if proc_desconto:
   out_mensagem = 'Desconto Disponível para o Cliente'
 
 print(out_mensagem)
