@@ -17,12 +17,12 @@ cond_preco_cafe = 2.80
 in_valor_compra = cond_preco_pao + cond_preco_leite + cond_preco_cafe
 in_cliente_pagamento = 20.00
 
-ver_compra_sem_troco = in_valor_compra == in_cliente_pagamento
+proc_compra_sem_troco = in_valor_compra == in_cliente_pagamento
 calc_compra_com_troco = in_cliente_pagamento - in_valor_compra
 
 out_mensagem = f'Sem troco. Valor da Compra é de R${in_cliente_pagamento:.2f}'
 
-if (not ver_compra_sem_troco):
+if (not proc_compra_sem_troco):
   out_mensagem = f'TROCO: R${calc_compra_com_troco:.2f}'
 
 print(out_mensagem)
@@ -38,22 +38,22 @@ print(out_mensagem)
 print(f'=====================================')
 print(f'2) VERIFICAR APROVAÇÃO EM EXAME - MINHA RESPOSTA')
 
-cond_media_nota = 7.0
-cond_media_frequencia = 0.75
+cond_media_nota_escola = 7.0
+cond_media_frequencia_escola = 0.75
 
 in_media_nota_estudante = 8.5
 in_media_frequencia_estudante = 0.80
 
-ver_media = in_media_nota_estudante >= cond_media_nota
-ver_frequencia = in_media_frequencia_estudante >= cond_media_frequencia
-ver_aprovacao  = ver_media and ver_frequencia
+proc_media = in_media_nota_estudante >= cond_media_nota_escola
+proc_frequencia = in_media_frequencia_estudante >= cond_media_frequencia_escola
+proc_aprovacao  = proc_media and proc_frequencia
 
-out_mensagem = 'Estudante Reprovado'
+out_mensagem = 'Reprovado'
 
-if ver_aprovacao:
-  out_mensagem = 'Estudante Aprovado'
+if proc_aprovacao:
+  out_mensagem = 'Aprovado'
 
-print(out_mensagem)
+print(f'\nEstudante {out_mensagem}')
 
 # 3) OFERTA ESPECIAL
 # Uma loja oferece um desconto se o cliente comprar mais de 10 itens
