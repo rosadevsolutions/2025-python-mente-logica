@@ -85,6 +85,21 @@ print(out_mensagem)
 # Verificar se um ano é bissexto.
 # ● Um ano é bissexto se for divisível por 4.
 # ● Não é bissexto se for divisível por 100, exceto se for divisível por 400.
+print(f'\n=====================================')
+print(f'4) ANO BISSEXTO\n')
+
+in_ano = int(input('Informe um ano: \n'))
+
+proc_ano_bissexto = (in_ano % 4 == 0) and (in_ano % 100 != 0) or (in_ano % 400 == 0)
+
+out_classificacao = 'Normal'
+
+if proc_ano_bissexto:
+  out_classificacao = 'Bissexto'
+
+print(f'{in_ano} é Ano {out_classificacao}')
+
+
 
 # 5) CAIXA ELETRÔNICO
 # O usuário deve informar o valor do saque (apenas valores inteiros)
