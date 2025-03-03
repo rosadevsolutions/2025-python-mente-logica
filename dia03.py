@@ -178,13 +178,10 @@ print('=====================================')
 print('3) PAR OU ÍMPAR')
 
 in_numero = int(input('\nInforme um número: \n'))
-
-calc_numero_sobra = in_numero % 2
-ver_numero_par = calc_numero_sobra == 0
-
+proc_numero_par = (in_numero % 2) == 0
 out_mensagem = '\nNÚMERO PAR\n'
 
-if(not ver_numero_par):
+if(not proc_numero_par):
   out_mensagem = '\nNÚMERO ÍMPAR\n'
 
 print(out_mensagem)
