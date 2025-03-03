@@ -158,16 +158,16 @@ print(f'DESAFIO 2) CALCULADORA IMC')
 
 in_peso = int(input('Informe seu peso: \n'))
 in_altura = float(input('\nInforme sua altura: \n'))
-calc_imc = in_peso / in_altura**2
+proc_imc = in_peso / (in_altura**2)
 
-ver_imc_ideal = calc_imc >= 18.5 and calc_imc <= 24.9
+proc_imc_ideal = (proc_imc >= 18.5) and (proc_imc <= 24.9)
 
 out_status = '\nPARABÉNS!!! IMC DENTRO DA FAIXA DE PESO IDEAL.'
 
-if(not ver_imc_ideal):
+if(not proc_imc_ideal):
   out_status = '\nALERTA!!! IMC FORA DA FAIXA DE PESO IDEAL.'
 
-out_valor = f'\nSEU IMC: {calc_imc:.1f} \nIMC - PESO IDEAL: Entre 18.5 e 24.9\n'
+out_valor = f'\nSEU IMC: {proc_imc:.1f} \nIMC - PESO IDEAL: Entre 18.5 e 24.9\n'
 
 out_mensagem = out_status + out_valor
 print(out_mensagem)
