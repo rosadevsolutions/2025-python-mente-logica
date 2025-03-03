@@ -14,11 +14,10 @@ cond_preco_pao = 3.50
 cond_preco_leite = 4.20
 cond_preco_cafe = 2.80
 
-in_valor_compra = cond_preco_pao + cond_preco_leite + cond_preco_cafe
+in_cliente_compra = cond_preco_pao + cond_preco_leite + cond_preco_cafe
 in_cliente_pagamento = 20.00
 
-proc_compra_sem_troco = in_valor_compra == in_cliente_pagamento
-calc_compra_com_troco = in_cliente_pagamento - in_valor_compra
+proc_compra_sem_troco = in_cliente_compra == in_cliente_pagamento
 
 out_mensagem = f'Sem troco. Valor da Compra é de R${in_cliente_pagamento:.2f}'
 
