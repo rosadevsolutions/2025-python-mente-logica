@@ -22,7 +22,7 @@ calc_compra_com_troco = in_cliente_pagamento - in_valor_compra
 
 out_mensagem = f'Sem troco. Valor da Compra é de R${in_cliente_pagamento:.2f}'
 
-if ver_compra_sem_troco != True:
+if (not ver_compra_sem_troco):
   out_mensagem = f'TROCO: R${calc_compra_com_troco:.2f}'
 
 print(out_mensagem)
@@ -143,7 +143,7 @@ ver_faixa_etaria = in_faixa_etaria_user >= cond_faixa_etaria
 
 out_status = '\nPERMITIDO.'
 
-if( ver_faixa_etaria != True ):
+if(not ver_faixa_etaria):
   out_status = '\nNÃO PERMITIDO.'
 
 out_faixa_etaria = f'\nFaixa Etária do Filme: {cond_faixa_etaria} anos. \nIdade do Cliente: {in_faixa_etaria_user} anos.\n'
@@ -164,7 +164,7 @@ ver_imc_ideal = calc_imc >= 18.5 and calc_imc <= 24.9
 
 out_status = '\nPARABÉNS!!! IMC DENTRO DA FAIXA DE PESO IDEAL.'
 
-if(ver_imc_ideal != True):
+if(not ver_imc_ideal):
   out_status = '\nALERTA!!! IMC FORA DA FAIXA DE PESO IDEAL.'
 
 out_valor = f'\nSEU IMC: {calc_imc:.1f} \nIMC - PESO IDEAL: Entre 18.5 e 24.9\n'
@@ -184,7 +184,7 @@ ver_numero_par = calc_numero_sobra == 0
 
 out_mensagem = '\nNÚMERO PAR\n'
 
-if(ver_numero_par != True):
+if(not ver_numero_par):
   out_mensagem = '\nNÚMERO ÍMPAR\n'
 
 print(out_mensagem)
