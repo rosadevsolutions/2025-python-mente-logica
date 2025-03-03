@@ -93,17 +93,17 @@ print(out_mensagem)
 print(f'=====================================')
 print(f'4) SISTEMA DE ACESSO - MINHA RESPOSTA')
 
+cond_senha_sistema = "abcd1235"
 in_senha_usuario = "abcd12345"
-def_senha_sistema = "abcd1235"
-check_senha = in_senha_usuario == def_senha_sistema
-check_acesso = False
-out_acesso = check_senha == True and check_acesso == False
-out_mensagem = "Acesso Bloqueado"
+proc_senha = in_senha_usuario == cond_senha_sistema
+proc_acesso = False
+out_acesso = (proc_senha == True) and (proc_acesso == False)
+out_mensagem = "Bloqueado"
 
 if(out_acesso):
-  out_mensagem = "Acesso Liberado"
+  out_mensagem = "Liberado"
 
-print(f'{out_mensagem}')
+print(f'Acesso {out_mensagem}')
 
 
 
@@ -116,12 +116,12 @@ print(f'5) DIVISÃO DE CONTA - MINHA RESPOSTA')
 
 in_clientes = 2
 in_valor_total = 120
-calc_valor_individual = in_valor_total / in_clientes
-out_divisao_exata = in_valor_total % in_clientes
-out_mensagem = f'Divisão não é exata! Cada pessoa vai pagar aproximadamente R${calc_valor_individual:.2f}'
+proc_valor_individual = in_valor_total / in_clientes
+proc_divisao_exata = (in_valor_total % in_clientes) == 0
+out_mensagem = f'Divisão não é exata! Cada pessoa vai pagar aproximadamente R${proc_valor_individual:.2f}'
 
-if (out_divisao_exata == 0):
-  out_mensagem =  f'Divisão exata. Cada pessoa vai pagar R${calc_valor_individual:.2f}'
+if (proc_divisao_exata):
+  out_mensagem =  f'Divisão exata. Cada pessoa vai pagar R${proc_valor_individual:.2f}'
 
 print(out_mensagem)
 
