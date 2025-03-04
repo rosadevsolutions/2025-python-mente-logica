@@ -88,23 +88,7 @@ print(out_mensagem)
 print(f'\n=====================================')
 print(f'4) ANO BISSEXTO\n')
 
-in_ano = int(input('Informe um ano: \n'))
 
-proc_ano_bissexto = (in_ano % 4 == 0) and (in_ano % 100 != 0) or (in_ano % 400 == 0)
-
-out_classificacao = 'Normal'
-
-if proc_ano_bissexto:
-  out_classificacao = 'Bissexto'
-
-print(f'{in_ano} é Ano {out_classificacao}')
-
-
-
-# 5) CAIXA ELETRÔNICO
-# O usuário deve informar o valor do saque (apenas valores inteiros)
-# O programa deve informar quantas cédulas de cada valor serão fornecidas.
-# Considere cédulas de R$100, R$50, R$20, R$10, R$5 e R$2.
 
 # DESAFIOS EXTRAS
 
@@ -113,9 +97,11 @@ print(f'{in_ano} é Ano {out_classificacao}')
 # O cliente deve informar o valor do empréstimo, renda mensal e número de parcelas.
 # O empréstimo será aprovado se o valor da parcela não exceder 30% da renda mensal.
 
+
 # 2) PEDRA, PAPEL OU TESOURA
 # Simular o jogo "Pedra, Papel ou Tesoura" entre o usuário e o computador.
 
 # 3) CALCULADORA DE TARIFA DE TÁXI
+
 # Uma empresa de táxi cobra uma tarifa básica de R$4.00, mais R$0.25 por quilômetro rodado.
 # Calcular o valor total da corrida com base na distância percorrida.
