@@ -3,9 +3,9 @@
 # 1) NÚMERO POSITIVO, NEGATIVO OU ZERO
 # Solicitar um número ao usuário e verificar se é positivo, negativo ou zero.
 
-print(f'\n=====================================')
-print(f'1) NÚMERO POSITIVO, NEGATIVO OU ZERO - MINHA RESPOSTA')
-print(f'=====================================\n')
+print('\n=====================================')
+print('1) NÚMERO POSITIVO, NEGATIVO OU ZERO - MINHA RESPOSTA')
+print('=====================================\n')
 
 in_numero_usuario = int(input('INFORME UM NÚMERO: \n'))
 

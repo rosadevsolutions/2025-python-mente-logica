@@ -4,14 +4,13 @@
 # 2) CALCULADORA SIMPLES
 # Pedir ao usuário dois números e uma operação (+,-, *, /) e realizar o cálculo correspondente.
 
-print(f'\n=====================================')
-print(f'2) CALCULADORA SIMPLES - MINHA RESPOSTA')
-print(f'=====================================\n')
+print('\n=====================================')
+print('DESAFIO 2) CALCULADORA SIMPLES - MINHA RESPOSTA')
+print('=====================================\n')
 
 in_numero_1 = int(input('Informe um número: \n'))
 in_numero_2 = int(input('Informe outro número: \n'))
-in_operacao = input('Informe a operação a ser realizada com os números: \n')
-in_operacao = in_operacao.lower()
+in_operacao = input('Informe a operação a ser realizada com os números: \n').lower()
 
 proc_calc_somar       = in_numero_1 + in_numero_2
 proc_calc_subtrair    = in_numero_1 - in_numero_2

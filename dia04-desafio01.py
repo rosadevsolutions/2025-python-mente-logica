@@ -6,9 +6,9 @@
 # O cliente deve informar o valor do empréstimo, renda mensal e número de parcelas.
 # O empréstimo será aprovado se o valor da parcela não exceder 30% da renda mensal.
 
-print(f'\n=====================================')
-print(f'DESAFIO 1) EMPRÉSTIMO BANCÁRIO\n')
-print(f'=====================================\n')
+print('\n=====================================')
+print('DESAFIO 1) EMPRÉSTIMO BANCÁRIO - MINHA RESPOSTA\n')
+print('=====================================\n')
 
 in_emprestimo_valor = float(input('Valor do empréstimo desejado: \n'))
 in_renda_mensal = float(input('\nSua renda mensal: \n'))

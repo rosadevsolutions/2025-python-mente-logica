@@ -7,9 +7,9 @@
 # ● Adulto: 18 a 59 anos
 # ● Idoso: 60 anos ou mais
 
-print(f'\n=====================================')
-print(f'3) CLASSIFICAÇÃO DE IDADE')
-print(f'=====================================\n')
+print('\n=====================================')
+print('3) CLASSIFICAÇÃO DE IDADE')
+print('=====================================\n')
 
 in_idade = int(input('INFORME SUA IDADE: \n'))
 
