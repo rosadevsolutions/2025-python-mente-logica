@@ -121,62 +121,47 @@ out_mensagem = f'\n{out_emprestimo_status}\n{out_comprometimento}'
 print(out_mensagem)
 
 # 2) PEDRA, PAPEL OU TESOURA
-# Simular o jogo "Pedra, Papel ou Tesoura" entre o usuário e o computador.
+# Simular o jogo "PEDRA, PAPEL ou TESOURA" entre o usuário e o computador.
 print(f'\n=====================================')
 print(f'DESAFIO 2) PEDRA, PAPEL OU TESOURA')
 
 in_jogador1 = input('\nJogador 1 - Escolha o objeto desejado: \n').upper()
 in_jogador2 = input('\nJogador 2 - Escolha o objeto desejado: \n').upper()
 
-proc_vencedor1_pedra   = (in_jogador1 == 'pedra')   and (in_jogador2 == 'tesoura')
-proc_vencedor1_papel   = (in_jogador1 == 'papel')   and (in_jogador2 == 'pedra')
-proc_vencedor1_tesoura = (in_jogador1 == 'tesoura') and (in_jogador2 == 'papel')
-proc_vencedor2_pedra   = (in_jogador1 == 'tesoura') and (in_jogador2 == 'pedra')
-proc_vencedor2_papel   = (in_jogador1 == 'pedra')   and (in_jogador2 == 'papel')
-proc_vencedor2_tesoura = (in_jogador1 == 'papel')   and (in_jogador2 == 'tesoura')
+proc_vencedor1_pedra   = (in_jogador1 == 'PEDRA')   and (in_jogador2 == 'TESOURA')
+proc_vencedor1_papel   = (in_jogador1 == 'PAPEL')   and (in_jogador2 == 'PEDRA')
+proc_vencedor1_tesoura = (in_jogador1 == 'TESOURA') and (in_jogador2 == 'PAPEL')
+proc_vencedor2_pedra   = (in_jogador1 == 'TESOURA') and (in_jogador2 == 'PEDRA')
+proc_vencedor2_papel   = (in_jogador1 == 'PEDRA')   and (in_jogador2 == 'PAPEL')
+proc_vencedor2_tesoura = (in_jogador1 == 'PAPEL')   and (in_jogador2 == 'TESOURA')
+proc_vazio = (in_jogador1 == '' or in_jogador2 == '')
 
-out_vencedor = ''
-out_vencedor_objeto = ''
-out_perdedor_objeto = ''
+out_vencedor_objeto = in_jogador1
+out_perdedor_objeto = in_jogador2
 
-if proc_vencedor1_pedra:
-  out_vencedor = 'Jogador 1'
-  out_vencedor_objeto = "pedra"
-  out_perdedor_objeto = "tesoura"
-elif proc_vencedor1_papel:
-  out_vencedor = 'Jogador 1'
-  out_vencedor_objeto = "papel"
-  out_perdedor_objeto = "pedra"
-elif proc_vencedor1_tesoura:
-  out_vencedor = 'Jogador 1'
-  out_vencedor_objeto = "tesoura"
-  out_perdedor_objeto = "papel"
-elif proc_vencedor2_pedra:
-  out_vencedor = 'Jogador 2'
-  out_vencedor_objeto = "pedra"
-  out_perdedor_objeto = "tesoura"
-elif proc_vencedor2_papel:
-  out_vencedor = 'Jogador 2'
-  out_vencedor_objeto = "papel"
-  out_perdedor_objeto = "pedra"
-elif proc_vencedor2_tesoura:
-  out_vencedor = 'Jogador 2'
-  out_vencedor_objeto = "tesoura"
-  out_perdedor_objeto = "papel"
+if proc_vazio:
+  out_mensagem_d2 = '\n0S DOIS JOGADORES PRECISAM DEFINIR SEUS OBJETOS!'
 else:
-  out_mensagem_d2 = "EMPATE!"
+  if proc_vencedor1_pedra or proc_vencedor1_papel or proc_vencedor1_tesoura:
+    out_vencedor = 'VENCEDOR: JOGADOR 1'
+    out_mensagem_d2 = f'\n{out_vencedor} | {out_vencedor_objeto} ganha de {out_perdedor_objeto}'
+  elif proc_vencedor2_pedra or proc_vencedor2_papel or proc_vencedor2_tesoura:
+    out_vencedor = 'VENCEDOR: JOGADOR 2'
+    out_vencedor_objeto = in_jogador2
+    out_perdedor_objeto = in_jogador1
+    out_mensagem_d2 = f'\n{out_vencedor} | {out_vencedor_objeto} ganha de {out_perdedor_objeto}'
+  else:
+    out_vencedor = 'EMPATE!'
+    out_mensagem_d2 = f'\n{out_vencedor} | {out_vencedor_objeto} é igual a {out_perdedor_objeto}'
 
-out_mensagem_d2 = f'\nVENCEDOR: {out_vencedor} | {out_vencedor_objeto} ganha de {out_perdedor_objeto}'
 print(out_mensagem_d2)
-
-
 
 
 # 3) CALCULADORA DE TARIFA DE TÁXI
 # Uma empresa de táxi cobra uma tarifa básica de R$4.00, mais R$0.25 por quilômetro rodado.
 # Calcular o valor total da corrida com base na distância percorrida.
 print(f'\n=====================================')
-print(f'3) CALCULADORA DE TARIFA DE TÁXI\n')
+print(f'DESAFIO 3) CALCULADORA DE TARIFA DE TÁXI\n')
 
 cond_tarifa_valor = 4.00
 cond_km_valor = 0.25
@@ -187,5 +172,9 @@ proc_km_percorridos_valor = in_km_percorridos_quantidade * cond_km_valor
 
 out_corrida_valor = cond_tarifa_valor + proc_km_percorridos_valor
 
-out_mensagem_d3 = f'Valor da Corrida: R$ {out_corrida_valor:.2f}'
+out_mensagem_d3 = "Informe uma distância a partir de 1km para calcular o valor da corrida."
+
+if in_km_percorridos_quantidade >= 1:
+  out_mensagem_d3 = f'Valor da Corrida: R$ {out_corrida_valor:.2f}'
+
 print(out_mensagem_d3)
