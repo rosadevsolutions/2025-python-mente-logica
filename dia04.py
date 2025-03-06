@@ -58,14 +58,14 @@ print(out_mensagem)
 # ● Adulto: 18 a 59 anos
 # ● Idoso: 60 anos ou mais
 print(f'\n=====================================')
-print(f'3) CLASSIFICAÇÇÃO DE IDADE\n')
+print(f'3) CLASSIFICAÇÃO DE IDADE\n')
 
 in_idade = int(input('Informe sua idade: '))
 
-proc_idade_crianca = in_idade >= 0 and in_idade <= 12
-proc_idade_adolescente = in_idade >= 13 and in_idade <= 17
-proc_idade_adulto = in_idade >= 18 and in_idade <= 59
-proc_idade_idoso = in_idade >= 60
+proc_idade_crianca = (in_idade >= 0) and (in_idade <= 12)
+proc_idade_adolescente = (in_idade >= 13) and (in_idade <= 17)
+proc_idade_adulto = (in_idade >= 18) and (in_idade <= 59)
+proc_idade_idoso = (in_idade >= 60)
 
 if proc_idade_crianca:
   out_classificacao = 'Criança'
@@ -110,11 +110,11 @@ proc_emprestimo_parcela_valor = in_emprestimo_valor / in_emprestimo_parcelas
 proc_emprestimo_parcela_proporcao_renda = (proc_emprestimo_parcela_valor / in_renda_mensal) * 100
 proc_cond_emprestimo_liberacao = proc_emprestimo_parcela_proporcao_renda <= 30
 
-out_emprestimo_status = 'Empréstimo Negado.'
+out_emprestimo_status = 'EMPRÉSTIMO NEGADO.'
 out_comprometimento = f'Parcela compromete {proc_emprestimo_parcela_proporcao_renda}% de sua renda mensal.'
 
 if(proc_cond_emprestimo_liberacao):
-  out_emprestimo_status = 'Empréstimo Aprovado.'
+  out_emprestimo_status = 'EMPRÉSTIMO APROVADO.'
   out_comprometimento = f'Parcela compromete apenas {proc_emprestimo_parcela_proporcao_renda}% de sua renda mensal'
 
 out_mensagem = f'\n{out_emprestimo_status}\n{out_comprometimento}'
@@ -122,8 +122,70 @@ print(out_mensagem)
 
 # 2) PEDRA, PAPEL OU TESOURA
 # Simular o jogo "Pedra, Papel ou Tesoura" entre o usuário e o computador.
+print(f'\n=====================================')
+print(f'DESAFIO 2) PEDRA, PAPEL OU TESOURA')
+
+in_jogador1 = input('\nJogador 1 - Escolha o objeto desejado: \n').upper()
+in_jogador2 = input('\nJogador 2 - Escolha o objeto desejado: \n').upper()
+
+proc_vencedor1_pedra   = (in_jogador1 == 'pedra')   and (in_jogador2 == 'tesoura')
+proc_vencedor1_papel   = (in_jogador1 == 'papel')   and (in_jogador2 == 'pedra')
+proc_vencedor1_tesoura = (in_jogador1 == 'tesoura') and (in_jogador2 == 'papel')
+proc_vencedor2_pedra   = (in_jogador1 == 'tesoura') and (in_jogador2 == 'pedra')
+proc_vencedor2_papel   = (in_jogador1 == 'pedra')   and (in_jogador2 == 'papel')
+proc_vencedor2_tesoura = (in_jogador1 == 'papel')   and (in_jogador2 == 'tesoura')
+
+out_vencedor = ''
+out_vencedor_objeto = ''
+out_perdedor_objeto = ''
+
+if proc_vencedor1_pedra:
+  out_vencedor = 'Jogador 1'
+  out_vencedor_objeto = "pedra"
+  out_perdedor_objeto = "tesoura"
+elif proc_vencedor1_papel:
+  out_vencedor = 'Jogador 1'
+  out_vencedor_objeto = "papel"
+  out_perdedor_objeto = "pedra"
+elif proc_vencedor1_tesoura:
+  out_vencedor = 'Jogador 1'
+  out_vencedor_objeto = "tesoura"
+  out_perdedor_objeto = "papel"
+elif proc_vencedor2_pedra:
+  out_vencedor = 'Jogador 2'
+  out_vencedor_objeto = "pedra"
+  out_perdedor_objeto = "tesoura"
+elif proc_vencedor2_papel:
+  out_vencedor = 'Jogador 2'
+  out_vencedor_objeto = "papel"
+  out_perdedor_objeto = "pedra"
+elif proc_vencedor2_tesoura:
+  out_vencedor = 'Jogador 2'
+  out_vencedor_objeto = "tesoura"
+  out_perdedor_objeto = "papel"
+else:
+  out_mensagem_d2 = "EMPATE!"
+
+out_mensagem_d2 = f'\nVENCEDOR: {out_vencedor} | {out_vencedor_objeto} ganha de {out_perdedor_objeto}'
+print(out_mensagem_d2)
+
+
+
 
 # 3) CALCULADORA DE TARIFA DE TÁXI
-
 # Uma empresa de táxi cobra uma tarifa básica de R$4.00, mais R$0.25 por quilômetro rodado.
 # Calcular o valor total da corrida com base na distância percorrida.
+print(f'\n=====================================')
+print(f'3) CALCULADORA DE TARIFA DE TÁXI\n')
+
+cond_tarifa_valor = 4.00
+cond_km_valor = 0.25
+
+in_km_percorridos_quantidade = int(input('Informe a quantidade de km percorridos: \n'))
+
+proc_km_percorridos_valor = in_km_percorridos_quantidade * cond_km_valor
+
+out_corrida_valor = cond_tarifa_valor + proc_km_percorridos_valor
+
+out_mensagem_d3 = f'Valor da Corrida: R$ {out_corrida_valor:.2f}'
+print(out_mensagem_d3)
